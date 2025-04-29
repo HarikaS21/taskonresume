@@ -13,7 +13,7 @@ const ForgotPassword = () => {
   const handleReset = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/forgot-password', {
+      const res = await axios.post('https://backend-bsay.onrender.com/forgot-password', {
         email,
         securityAnswer,
         newPassword,

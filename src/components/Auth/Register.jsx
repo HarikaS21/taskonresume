@@ -21,7 +21,11 @@ const Register = () => {
         password,
         securityQuestion,
         securityAnswer,
-      });
+      },
+      {
+        withCredentials: true,
+      }
+    ); 
       navigate('/login');
     } catch (err) {
       setError(err.response?.data?.message || 'Registration failed');

@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://backend-bsay.onrender.com//login', { email, password });
+      const res = await axios.post('https://backend-bsay.onrender.com//login', { email, password },{withCredentials: true});
       localStorage.setItem('token', res.data.token);
 
       dispatch(loginSuccess({
