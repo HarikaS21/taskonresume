@@ -1,0 +1,9 @@
+{
+    "build": {
+      "command": "cd frontend && npm run build",
+      "outputDir": "frontend/dist"
+    },
+    "routes": [
+      { "src": "/(.*)", "dest": "/index.html" }
+    ]
+  }
