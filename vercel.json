@@ -1,9 +1,17 @@
 {
-    "build": {
-      "command": "cd frontend && npm run build",
-      "outputDir": "frontend/dist"
-    },
-    "routes": [
-      { "src": "/(.*)", "dest": "/index.html" }
-    ]
-  }
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "frontend/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
